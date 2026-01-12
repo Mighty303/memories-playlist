@@ -6,7 +6,7 @@ export default function Playlist({ memoryCards, playlistCover, onSongClick, onPl
         // Create a formatted text version of all memories
         let content = "911🧸 - Our Memory Playlist\n";
         content += "A collection of songs that remind us of our special moments together💗\n\n";
-        content += "=" .repeat(60) + "\n\n";
+        content += "=".repeat(60) + "\n\n";
         
         memoryCards.forEach((card, index) => {
             content += `${index + 1}. ${card.songTitle} - ${card.artist}\n`;
