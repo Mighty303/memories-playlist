@@ -69,22 +69,13 @@ export default function SpotifyMemoryCard() {
             audioSrc: starlight
         },
         {
-            id: 5,
+            id: 6,
             albumCover: memoryImage3,
             songTitle: "GO!",
             artist: "CORTIS",
             memoryText: "Whenever I hear this song, it reminds me of your tiktok of drmr's club. It also reminds of the day you bought me drmr's club and went to sfu just to give it to me.",
             memoryDate: "September 29, 2025",
             audioSrc: GO_CORTIS
-        },
-        {
-            id: 6,
-            albumCover: memoryImage4,
-            songTitle: "Trust",
-            artist: "RIKI",
-            memoryText: "I specifically rmb this song on the day we picked up matching maltese badminton shirts. I rmb us cuddling and this song playing on ur Google Home.",
-            memoryDate: "September 29, 2025",
-            audioSrc: Trust
         },
         {
             id: 7,
@@ -106,6 +97,15 @@ export default function SpotifyMemoryCard() {
         },
         {
             id: 9,
+            albumCover: memoryImage4,
+            songTitle: "Trust",
+            artist: "RIKI",
+            memoryText: "I specifically rmb this song on the day we picked up matching maltese badminton shirts. I rmb us cuddling and this song playing on ur Google Home.",
+            memoryDate: "November 15th, 2025",
+            audioSrc: Trust
+        },
+        {
+            id: 10,
             albumCover: memoryImage7,
             songTitle: "我的驕傲",
             artist: "joey yung",
@@ -114,7 +114,7 @@ export default function SpotifyMemoryCard() {
             audioSrc: 我的驕傲
         },
         {
-            id: 10,
+            id: 11,
             albumCover: memoryImage8,
             songTitle: "Zoo",
             artist: "Shakira",
@@ -123,12 +123,12 @@ export default function SpotifyMemoryCard() {
             audioSrc: zoo
         },
         {
-            id: 11,
+            id: 12,
             albumCover: memoryImage9,
             songTitle: "you and i",
             artist: "Fion",
             memoryText: "I rmb you playing this song after we ate steak at Elisa and tellng me how this she just released it and wanted me to hear it too. Hearing this reminds me of this timex",
-            memoryDate: "January 15th, 2026",
+            memoryDate: "December 12th, 2025",
             audioSrc: youandi
         },
 
