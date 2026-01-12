@@ -1,7 +1,32 @@
 import React from 'react';
-import { Play } from 'lucide-react';
+import { Play, Download } from 'lucide-react';
 
 export default function Playlist({ memoryCards, playlistCover, onSongClick, onPlayClick, totalDuration = "7 hr 59 min" }) {
+    const handleDownload = () => {
+        // Create a formatted text version of all memories
+        let content = "911🧸 - Our Memory Playlist\n";
+        content += "A collection of songs that remind us of our special moments together💗\n\n";
+        content += "=" .repeat(60) + "\n\n";
+        
+        memoryCards.forEach((card, index) => {
+            content += `${index + 1}. ${card.songTitle} - ${card.artist}\n`;
+            content += `   Date: ${card.memoryDate}\n`;
+            content += `   Memory: ${card.memoryText}\n\n`;
+            content += "-".repeat(60) + "\n\n";
+        });
+        
+        // Create and download the file
+        const blob = new Blob([content], { type: 'text/plain' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = '911-memories-playlist.txt';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    };
+
     return (
         <div className="min-h-screen bg-gradient-to-b from-[#8B7E6A] via-[#5A5147] to-[#2A2520] pb-6">
             {/* Playlist Header */}
@@ -36,12 +61,19 @@ export default function Playlist({ memoryCards, playlistCover, onSongClick, onPl
             </div>
 
             {/* Play Button */}
-            <div className="px-6 mb-6">
+            <div className="px-6 mb-6 flex items-center gap-4">
                 <button
                     onClick={onPlayClick}
                     className="bg-[#1ED760] hover:bg-[#1FDF64] hover:scale-105 text-black rounded-full p-5 shadow-lg transition-all"
                 >
                     <Play className="w-5 h-5 md:w-8 md:h-8" fill="black" />
+                </button>
+                <button
+                    onClick={handleDownload}
+                    className="bg-zinc-800 hover:bg-zinc-700 hover:scale-105 text-white rounded-full p-5 shadow-lg transition-all"
+                    title="Download all memories"
+                >
+                    <Download className="w-5 h-5 md:w-8 md:h-8" />
                 </button>
             </div>
 
