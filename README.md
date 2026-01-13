@@ -1,1 +1,1 @@
-# Spotify Themed Playlist card for my girlfriend
+# Spotify Themed Playlist Card
